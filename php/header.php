@@ -8,7 +8,6 @@
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 
-        <!-- Custom Hover Dropdown for Products -->
         <li class="nav-item dropdown custom-dropdown">
           <a class="nav-link" href="products.html" id="productsDropdown">Products</a>
           <div class="dropdown-menu shadow-lg p-4" aria-labelledby="productsDropdown">

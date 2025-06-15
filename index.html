@@ -7,6 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js"></script>
 </head>
@@ -54,6 +55,26 @@
       <a href="#contact" class="btn btn-outline-light btn-lg">Get Started</a>
     </div>
   </section>
+<div class="position-relative d-inline-block">
+  <button class="btn btn-outline-primary" id="mailToggle">
+    <i class="bi bi-envelope-fill"></i> Mail Us
+  </button>
+
+  <div id="mailBox" class="p-3 bg-white shadow rounded position-absolute" style="top: 50px; right: 0; width: 300px; display: none;">
+    <h6 class="mb-2">Send a Message</h6>
+    <form>
+      <input type="email" class="form-control mb-2" placeholder="Your Email" required />
+      <textarea class="form-control mb-2" rows="3" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-primary btn-sm">Send</button>
+    </form>
+  </div>
+</div>
+<script>
+  document.getElementById("mailToggle").addEventListener("click", function () {
+    const box = document.getElementById("mailBox");
+    box.style.display = box.style.display === "none" ? "block" : "none";
+  });
+</script>
 
 <footer class="bg-dark text-white text-center py-4 mt-auto shadow">
   <div class="container">
