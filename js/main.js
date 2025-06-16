@@ -1,24 +1,17 @@
-$(document).ready(function () {
-  let productsLoaded = false;
+document.addEventListener("DOMContentLoaded", function () {
+  const mailBtn = document.getElementById("mailToggle");
+  const mailBox = document.getElementById("mailBox");
 
-  $('#productsDropdown').hover(function () {
-    if (!productsLoaded) {
-      $.ajax({
-        url: 'products.json',
-        method: 'GET',
-        dataType: 'json',
-        success: function (data) {
-          const menu = $('#productsMenu');
-          menu.empty();
-          data.forEach(item => {
-            menu.append(`<a class="dropdown-item" href="${item.link}">${item.name}</a>`);
-          });
-          productsLoaded = true;
-        },
-        error: function () {
-          $('#productsMenu').html('<div class="text-danger">Failed to load products</div>');
-        }
-      });
-    }
-  });
+  if (mailBtn && mailBox) {
+    mailBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      mailBox.style.display = (mailBox.style.display === "none" || mailBox.style.display === "") ? "block" : "none";
+    });
+
+    document.addEventListener("click", function (e) {
+      if (!mailBox.contains(e.target) && !mailBtn.contains(e.target)) {
+        mailBox.style.display = "none";
+      }
+    });
+  }
 });

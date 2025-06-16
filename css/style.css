@@ -76,3 +76,14 @@ footer a:hover {
   background-color: #0d6efd;
   color: #ffffff !important;
 }
+#mailBox {
+  z-index: 9999;
+}
+#address{
+    padding-top: 50px;
+    font-style: monospace;
+}
+#address-content{
+    font-size: 1.2rem;
+    line-height: 1.5;
+}

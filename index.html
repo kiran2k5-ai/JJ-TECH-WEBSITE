@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JJ TECH SOLUTIONS | Home</title>
+  <title>JJ TECH SOLUTIONS</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -23,7 +23,6 @@
       <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 
-        <!-- Custom Hover Dropdown for Products -->
         <li class="nav-item dropdown custom-dropdown">
           <a class="nav-link" href="products.html" id="productsDropdown">Products</a>
           <div class="dropdown-menu shadow-lg p-4" aria-labelledby="productsDropdown">
@@ -44,10 +43,35 @@
       </ul>
     </div>
   </div>
-</nav>
-
+    </nav>
+    <div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner" >
+    <div class="carousel-item active">
+      <img src="images/images3.jpeg" class="img-fluid rounded float-start" alt="" style="width:fit-content;height: fit-content;">
+    </div>
+    <div class="carousel-item">
+      <img src="images/images2.jpeg" class="img-fluid" alt="" style="width: fit-content;height: fit-content;">
+    </div>
+    <div class="carousel-item">
+      <img src="images/images1.jpeg" class="img-fluid rounded float-end" alt="" style="width: fit-content;height: fit-content;">
+    </div>
+  </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
   <div style="height: 70px;"></div>
-
   <section class="hero-section d-flex align-items-center text-center">
     <div class="container">
       <h1 class="display-4 fw-bold">Empowering Digital Transformation</h1>
@@ -55,40 +79,19 @@
       <a href="#contact" class="btn btn-outline-light btn-lg">Get Started</a>
     </div>
   </section>
-<div class="position-relative d-inline-block">
-  <button class="btn btn-outline-primary" id="mailToggle">
-    <i class="bi bi-envelope-fill"></i> Mail Us
-  </button>
 
-  <div id="mailBox" class="p-3 bg-white shadow rounded position-absolute" style="top: 50px; right: 0; width: 300px; display: none;">
-    <h6 class="mb-2">Send a Message</h6>
-    <form>
-      <input type="email" class="form-control mb-2" placeholder="Your Email" required />
-      <textarea class="form-control mb-2" rows="3" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn btn-primary btn-sm">Send</button>
-    </form>
-  </div>
-</div>
-<script>
-  document.getElementById("mailToggle").addEventListener("click", function () {
-    const box = document.getElementById("mailBox");
-    box.style.display = box.style.display === "none" ? "block" : "none";
-  });
-</script>
-
-<footer class="bg-dark text-white text-center py-4 mt-auto shadow">
+<footer class="bg-dark text-white text-center py-4 mt-auto shadow position-relative">
   <div class="container">
     <div class="mb-3">
-        <a href="https://facebook.com" target="_blank"><i class="bi bi-facebook fs-4"></i></a>
-        <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram fs-4"></i></a>
-        <a href="https://youtube.com" target="_blank"><i class="bi bi-youtube fs-4"></i></a>
-        <a href="https://linkedin.com" target="_blank"><i class="bi bi-linkedin fs-4"></i></a>
-        <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://facebook.com" target="_blank" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+      <a href="https://instagram.com" target="_blank" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+      <a href="https://youtube.com" target="_blank" class="text-white me-3"><i class="bi bi-youtube fs-4"></i></a>
+      <a href="https://linkedin.com" target="_blank" class="text-white me-3"><i class="bi bi-linkedin fs-4"></i></a>
+      <a href="https://twitter.com" target="_blank" class="text-white"><i class="fa-brands fa-x-twitter fs-5"></i></a>
     </div>
-    <p class="mb-0">&copy; 2025 JJ TECH SOLUTIONS. All rights reserved.</p>
+    <p class="mb-0 mt-3">&copy; 2025 JJ TECH SOLUTIONS. All rights reserved.</p>
   </div>
 </footer>
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
