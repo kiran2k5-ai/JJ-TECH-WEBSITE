@@ -1,3 +1,11 @@
+/* Global Styles */
+body {
+  background-color: rgb(255, 251, 245);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Hero Section */
 .hero-section {
   position: relative;
   background: url('assets/hero-bg.jpg') no-repeat center center/cover;
@@ -18,12 +26,16 @@
   position: relative;
   z-index: 2;
 }
+
+/* Navbar */
 .navbar-custom {
-  background-color: whitesmoke !important;
+  background-color: #fff !important;
+  border-bottom: 1px solid #ddd;
 }
 .navbar-custom .nav-link,
 .navbar-custom .navbar-brand {
   color: #000 !important;
+  font-weight: 500;
 }
 .navbar-custom .nav-link.active {
   font-weight: bold;
@@ -32,6 +44,8 @@
 .navbar-custom .nav-link:hover {
   color: #0d6efd !important;
 }
+
+/* Dropdown Menu */
 .custom-dropdown:hover .dropdown-menu {
   display: block;
   margin-top: 0;
@@ -54,10 +68,95 @@
   background-color: #f8f9fa;
   color: #0d6efd;
 }
-.footer {
-  background-color: #f8f9fa;
-  padding: 20px 0;
+
+/* Contact Section */
+.contact-section {
+  background-color: rgb(255, 251, 245);
+  background: url('../images/contact-bg.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  padding: 60px 0;
+  color: #fff;
+}
+.contact-section .overlay {
+  background-color: rgba(255, 251, 245, 0.85);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.contact-section .container {
+  position: relative;
+  z-index: 2;
+}
+.contact-section h1,
+.contact-section h3,
+.contact-section p {
+  color: #fff;
+}
+.contact-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffc107;
+}
+.contact-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.contact-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Contact Form */
+.contact-section form {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+.contact-section form .form-label {
+  font-weight: 600;
+}
+.contact-section form .form-control {
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  box-shadow: none;
+}
+.contact-section form input,
+.contact-section form textarea {
+  transition: border-color 0.3s ease;
+}
+.contact-section form input:focus,
+.contact-section form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+.contact-section form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+.contact-section form button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: #fff;
   text-align: center;
+  padding: 20px 0;
 }
 footer a {
   display: inline-flex;
@@ -68,22 +167,64 @@ footer a {
   margin: 0 5px;
   border-radius: 50%;
   background-color: transparent;
-  color: #ffffff;
+  color: #fff;
   transition: background-color 0.3s, color 0.3s;
 }
-
 footer a:hover {
   background-color: #0d6efd;
-  color: #ffffff !important;
+  color: #fff !important;
 }
+
+/* Address and Contact Info */
 #mailBox {
   z-index: 9999;
 }
-#address{
-    padding-top: 50px;
-    font-style: monospace;
+#address {
+  font-style: italic;
+  color: rgb(114, 3, 249);
+  font-weight: 600;
+  margin-top: 20px;
 }
-#address-content{
-    font-size: 1.2rem;
-    line-height: 1.5;
+#address-content {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+#contact {
+  padding-top: 60px;
+  font-style: italic;
+  font-size: 1.8rem;
+  color: #0d6efd;
+}
+#contact-h1 {
+  font-weight: bolder;
+}
+#contact-us {
+  padding-left: 10px;
+}
+
+/* Animated Banner */
+.animated-banner {
+  animation: zoomIn 3s ease-in-out forwards;
+  object-fit: cover;
+}
+@keyframes zoomIn {
+  from {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-section h1 {
+    font-size: 2.2rem;
+  }
+  .contact-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
