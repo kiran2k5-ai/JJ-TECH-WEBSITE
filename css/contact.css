@@ -1,128 +1,146 @@
 body {
-      background-color: rgb(255, 251, 245);
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-    }
+  background-color: rgb(255, 251, 245);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  padding-top: 80px;
+  overflow-x: hidden;
+}
 
-    .navbar-custom {
-      background-color: #fff !important;
-    }
+.navbar-custom {
+  background-color: #ffffff !important;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease;
+}
 
-    .navbar-custom .nav-link,
-    .navbar-custom .navbar-brand {
-      color: #000 !important;
-      font-weight: 500;
-    }
+.navbar-custom .nav-link,
+.navbar-custom .navbar-brand {
+  color: #000 !important;
+  font-weight: 500;
+}
 
-    .navbar-custom .nav-link.active {
-      font-weight: bold;
-      text-decoration: underline;
-    }
+.navbar-custom .nav-link:hover {
+  color: #007BFF;
+}
 
-    .contact-section {
-      background-color: rgb(255, 251, 245);
-      padding: 80px 0 60px;
-    }
+.navbar-custom .nav-link.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
 
-    .contact-section .overlay {
-      background-color: rgba(255, 251, 245, 0.9);
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      z-index: 1;
-    }
+.navbar-toggler {
+  border: none;
+}
 
-    .contact-section .container {
-      position: relative;
-      z-index: 2;
-    }
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,...");
+}
 
-    .contact-section h1 {
-      color: #333;
-    }
+.contact-section {
+  background-color: rgb(255, 251, 245);
+  padding: 80px 0 60px;
+  min-height: 100vh;
+  position: relative;
+}
 
-    .contact-section p,
-    .contact-section h5 {
-      color: #333;
-    }
+.contact-section .overlay {
+  background-color: rgba(255, 251, 245, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
 
-    .form-custom {
+.contact-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-section .col-md-6.mb-4 {
+  animation: fadeInUp 1s ease-in-out 0.2s both;
+}
+
+.contact-section h1,
+.contact-section h5,
+.contact-section p {
+  color: #333;
+}
+
+.form-custom {
   background-color: transparent;
   box-shadow: none;
   padding: 0;
 }
 
+.form-label {
+  font-weight: 600;
+}
 
-    .form-label {
-      font-weight: 600;
-    }
+.form-control {
+  border: none;
+  border-bottom: 1px solid #333;
+  border-radius: 0;
+  background-color: transparent;
+  padding-left: 0;
+  color: #1E293B;
+}
 
-    .form-control {
-      border: none;
-      border-bottom: 1px solid #333;
-      border-radius: 0;
-      background-color: transparent;
-      padding-left: 0;
-      color: #1E293B;
-    }
+.form-control:focus {
+  border-color: #1E293B;
+  box-shadow: none;
+}
 
-    .form-control:focus {
-      border-color: #1E293B;
-      box-shadow: none;
-    }
+.form-row {
+  display: flex;
+  gap: 20px;
+}
 
-    .form-row {
-      display: flex;
-      gap: 20px;
-    }
+.form-group {
+  flex: 1;
+  margin-bottom: 20px;
+}
 
-    .form-group {
-      flex: 1;
-      margin-bottom: 20px;
-    }
+.phone-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
-    .phone-input {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+.globe-icon {
+  font-size: 18px;
+  color: #1E293B;
+}
 
-    .globe-icon {
-      font-size: 18px;
-      color: #1E293B;
-    }
+.btn-submit {
+  background-color: #1E293B;
+  color: #CFF09E;
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 999px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
 
-    .btn-submit {
-      background-color: #1E293B;
-      color: #CFF09E;
-      padding: 15px;
-      font-size: 18px;
-      border: none;
-      border-radius: 999px;
-      width: 100%;
-      transition: background-color 0.3s ease;
-    }
+.btn-submit:hover {
+  background-color: #111827;
+}
 
-    .btn-submit:hover {
-      background-color: #111827;
-    }
+footer {
+  background-color: #222;
+  color: #fff;
+}
 
-    footer {
-      background-color: #222;
-      color: #fff;
-    }
+footer a {
+  color: #fff;
+  transition: color 0.3s;
+}
 
-    footer a {
-      color: #fff;
-      transition: color 0.3s;
-    }
+footer a:hover {
+  color: #ffc107;
+}
 
-    footer a:hover {
-      color: #ffc107;
-    }
-    /* Animation Keyframes */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -133,10 +151,6 @@ body {
     transform: translateY(0);
   }
 }
-
-/* Apply animation to Address block */
-.contact-section .col-md-6.mb-4 {
-  animation: fadeInUp 1s ease-in-out forwards;
-  opacity: 0;
-  animation-delay: 0.2s;
+p, h1, h2, h3, h4, h5, h6 {
+  line-height: 2.4; 
 }

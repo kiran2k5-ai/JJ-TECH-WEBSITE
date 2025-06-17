@@ -4,94 +4,183 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JJ TECH SOLUTIONS</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    .hero-section {
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-section .carousel-inner,
+    .hero-section .carousel-item,
+    .hero-section .carousel-item img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    .parallax-section {
+      background-image: url('images/images1.jpeg');
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      padding: 100px 0;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+    }
+    .parallax-section .container {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 40px;
+      border-radius: 10px;
+    }
+    .parallax-section h2 {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .parallax-section p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+    }
+    @media (max-width: 768px) {
+      .parallax-section {
+        background-attachment: scroll;
+      }
+      .parallax-section .container {
+        padding: 20px;
+      }
+      .parallax-section h2 {
+        font-size: 1.5rem;
+      }
+      .parallax-section p {
+        font-size: 1rem;
+      }
+    }
+  .mycontainer {
+  display: flex;
+}
+.mycontainer > div {
+  width:33%;
+}
+.box{
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5%;
+  animation: div-box;
+  animation-duration: 2s;
+  animation-iteration-count: 1; 
+}
+.card{
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+@keyframes div-box {
+  0%   {left:0px; top:0px;}
+  25%  {left:200px; top:0px;transform: rotate(20deg);}
+  100%  {left:0px; top:0px;transform: rotate(-20deg);}
+}
+  </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
 
-  <nav class="navbar navbar-expand-lg navbar-custom fixed-top shadow">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">JJ TECH SOLUTIONS</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-
-        <li class="nav-item dropdown custom-dropdown">
-          <a class="nav-link" href="products.html" id="productsDropdown">Products</a>
-          <div class="dropdown-menu shadow-lg p-4" aria-labelledby="productsDropdown">
-            <a class="dropdown-item" href="accounts.html">Accounts</a>
-            <a class="dropdown-item" href="#">Intventory</a>
-            <a class="dropdown-item" href="#">Breeder</a>
-            <a class="dropdown-item" href="#">Hatcher</a>
-            <a class="dropdown-item" href="#">Feed Mill</a>
-            <a class="dropdown-item" href="#">Processing Unit</a>
-            <a class="dropdown-item" href="#">Retail Outlet</a>
-            <a class="dropdown-item" href="#">Trading</a>
-          </div>
-        </li>
-
-        <li class="nav-item"><a class="nav-link" href="client.html">Client</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-    </nav>
-    <div id="carouselExampleIndicators" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner" >
-    <div class="carousel-item active">
-      <img src="images/images3.jpeg" class="img-fluid rounded float-start" alt="" style="width:fit-content;height: fit-content;">
-    </div>
-    <div class="carousel-item">
-      <img src="images/images2.jpeg" class="img-fluid" alt="" style="width: fit-content;height: fit-content;">
-    </div>
-    <div class="carousel-item">
-      <img src="images/images1.jpeg" class="img-fluid rounded float-end" alt="" style="width: fit-content;height: fit-content;">
-    </div>
-  </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-  <div style="height: 70px;"></div>
-  <section class="hero-section d-flex align-items-center text-center">
+  <nav class="navbar navbar-expand-lg navbar-custom fixed-top shadow bg-white">
     <div class="container">
-      <h1 class="display-4 fw-bold">Empowering Digital Transformation</h1>
-      <p class="lead mt-3 mb-4">Innovative solutions for enterprises, powered by technology and intelligence.</p>
-      <a href="#contact" class="btn btn-outline-light btn-lg">Get Started</a>
+      <a class="navbar-brand fw-bold" href="index.html">JJ TECH SOLUTIONS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item dropdown custom-dropdown">
+            <a class="nav-link" href="products.html" id="productsDropdown">Products</a>
+            <div class="dropdown-menu shadow-lg p-4">
+              <a class="dropdown-item" href="accounts.html">Accounts</a>
+              <a class="dropdown-item" href="#">Inventory</a>
+              <a class="dropdown-item" href="#">Breeder</a>
+              <a class="dropdown-item" href="#">Hatcher</a>
+              <a class="dropdown-item" href="#">Feed Mill</a>
+              <a class="dropdown-item" href="#">Processing Unit</a>
+              <a class="dropdown-item" href="#">Retail Outlet</a>
+              <a class="dropdown-item" href="#">Trading</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="client.html">Client</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="parallax-section">
+    <div class="container text-center">
+      <h2>Welcome to JJ Tech Solutions</h2>
+      <p>
+        At JJ Tech Solutions, we believe technology is not just a tool — it's a catalyst for transformation. Founded with a vision to empower businesses through cutting-edge digital solutions, we are a team of passionate technologists, engineers, and innovators dedicated to building the future.
+      </p>
+      <p>
+        With expertise in software development, AI and automation, cloud services, cybersecurity, and custom IT consulting, we deliver solutions that are scalable, secure, and tailored to your unique needs.
+      </p>
+      <p><strong>Our mission is simple:</strong> Empower. Innovate. Transform.</p>
+      <p>
+        Whether you're a startup looking to scale or an enterprise optimizing legacy systems, JJ Tech Solutions is your trusted partner in the digital journey.
+      </p>
     </div>
   </section>
+  
+    <h2 class="text-center">Our Areas of Expertise</h2>
 
-<footer class="bg-dark text-white text-center py-4 mt-auto shadow position-relative">
-  <div class="container">
-    <div class="mb-3">
-      <a href="https://facebook.com" target="_blank" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
-      <a href="https://instagram.com" target="_blank" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
-      <a href="https://youtube.com" target="_blank" class="text-white me-3"><i class="bi bi-youtube fs-4"></i></a>
-      <a href="https://linkedin.com" target="_blank" class="text-white me-3"><i class="bi bi-linkedin fs-4"></i></a>
-      <a href="https://twitter.com" target="_blank" class="text-white"><i class="fa-brands fa-x-twitter fs-5"></i></a>
+  <div class="mycontainer">
+    <div id="div-inline" class="box card">
+      <h2>SQL Server</h2>
+      <p>We provide safe and secure place<br> to retrive and recive data</p>
     </div>
-    <p class="mb-0 mt-3">&copy; 2025 JJ TECH SOLUTIONS. All rights reserved.</p>
+    
+    <div id="div-inline" class="box card"> 
+      <h2>SQL Server</h2>
+      <p>We provide safe and secure place<br> to retrive and recive data</p>
+    </div>
+    <div id="div-inline" class="box card">
+      <h2>SQL Server</h2>
+      <p>We provide safe and secure place<br> to retrive and recive data</p>
+    </div><br>
+    
   </div>
-</footer>
+  <center>
+  <div class="box card">
+      <h2>SQL Server</h2>
+      <p>We provide safe and secure place<br> to retrive and recive data</p>
+    </div>
+  </center>
+  
+  <div style="background-color: bisque;">
+    <h2>Meet Our Clients</h2>
+    <p>We are capable of providing software to all clients <br>
+       We are capable of providing software to all clients <br>
+       We are capable of providing software to all clients <br>
+       We are capable of providing software to all clients <br>
+    </p>
+
+  </div>
+  <footer class="bg-dark text-white text-center py-4 mt-auto shadow position-relative">
+    <div class="container">
+      <div class="mb-3">
+        <a href="https://facebook.com" target="_blank" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a>
+        <a href="https://instagram.com" target="_blank" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+        <a href="https://youtube.com" target="_blank" class="text-white me-3"><i class="bi bi-youtube fs-4"></i></a>
+        <a href="https://linkedin.com" target="_blank" class="text-white me-3"><i class="bi bi-linkedin fs-4"></i></a>
+        <a href="https://twitter.com" target="_blank" class="text-white"><i class="fa-brands fa-x-twitter fs-5"></i></a>
+      </div>
+      <p class="mb-0 mt-3">&copy; 2025 JJ TECH SOLUTIONS. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
