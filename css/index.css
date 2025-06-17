@@ -4,6 +4,16 @@ body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
 }
+.parallax-section {
+  background-image: url('images/images1.jpeg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+}
+
 
 .navbar-custom {
   background-color: #ffffff;
@@ -41,10 +51,126 @@ body {
 }
 
 .hero-section {
+  height: 100vh;
   padding-top: 100vh;
   padding-bottom: 80px;
-  z-index: 1;
   position: relative;
+  overflow: hidden;
+  z-index: 1;
+  line-height: 1.8;
+}
+
+.hero-section .carousel-inner,
+.hero-section .carousel-item,
+.hero-section .carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.parallax-section {
+  background-image: url('images/images1.jpeg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.parallax-section .container {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.parallax-section h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.parallax-section p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .parallax-section {
+    background-attachment: scroll;
+  }
+
+  .parallax-section .container {
+    padding: 20px;
+  }
+
+  .parallax-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .parallax-section p {
+    font-size: 1rem;
+  }
+}
+
+.white-section {
+  background-color: white;
+  padding: 100px 0;
+  text-shadow: none;
+}
+
+.expertise-section {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+.expertise-section h2 {
+  font-weight: 700;
+}
+
+.mycontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.mycontainer > div {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+.box {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 12px;
+  animation: div-box 2s 1;
+}
+
+.card {
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+@keyframes div-box {
+  0% { left: 0px; top: 0px; }
+  25% { left: 200px; top: 0px; transform: rotate(20deg); }
+  100% { left: 0px; top: 0px; transform: rotate(20deg); }
+}
+
+.bg-bisque {
+  background-color: bisque;
+}
+
+.clients-section {
+  padding: 80px 0;
+  font-size: 1.1rem;
   line-height: 1.8;
 }
 
@@ -60,4 +186,20 @@ footer a {
 
 footer a:hover {
   color: #ffc107;
+}
+.expertise-section {
+  background-color: #f9f9fb;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
 }

@@ -83,8 +83,46 @@
 @keyframes div-box {
   0%   {left:0px; top:0px;}
   25%  {left:200px; top:0px;transform: rotate(20deg);}
-  100%  {left:0px; top:0px;transform: rotate(-20deg);}
+  100%  {left:0px; top:0px;transform: rotate(20deg);}
+  100%   {left:0px; top:0px;}
 }
+.white-section {
+  background-color:beige;
+  padding: 100px 0;
+  color:white;
+  text-shadow: none;
+}
+.expertise-section {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+.expertise-section h2 {
+  font-weight: 700;
+}
+
+.box.card {
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+}
+
+.box.card:hover {
+  transform: translateY(-5px);
+}
+.bg-bisque {
+  background-color: bisque;
+}
+
+.clients-section {
+  padding: 80px 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+
+
   </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -104,7 +142,7 @@
               <a class="dropdown-item" href="accounts.html">Accounts</a>
               <a class="dropdown-item" href="#">Inventory</a>
               <a class="dropdown-item" href="#">Breeder</a>
-              <a class="dropdown-item" href="#">Hatcher</a>
+              <a class="dropdown-item" href="#">Hatchery</a>
               <a class="dropdown-item" href="#">Feed Mill</a>
               <a class="dropdown-item" href="#">Processing Unit</a>
               <a class="dropdown-item" href="#">Retail Outlet</a>
@@ -119,56 +157,82 @@
     </div>
   </nav>
 
-  <section class="parallax-section">
-    <div class="container text-center">
-      <h2>Welcome to JJ Tech Solutions</h2>
-      <p>
-        At JJ Tech Solutions, we believe technology is not just a tool — it's a catalyst for transformation. Founded with a vision to empower businesses through cutting-edge digital solutions, we are a team of passionate technologists, engineers, and innovators dedicated to building the future.
-      </p>
-      <p>
-        With expertise in software development, AI and automation, cloud services, cybersecurity, and custom IT consulting, we deliver solutions that are scalable, secure, and tailored to your unique needs.
-      </p>
-      <p><strong>Our mission is simple:</strong> Empower. Innovate. Transform.</p>
-      <p>
-        Whether you're a startup looking to scale or an enterprise optimizing legacy systems, JJ Tech Solutions is your trusted partner in the digital journey.
-      </p>
-    </div>
-  </section>
-  
-    <h2 class="text-center">Our Areas of Expertise</h2>
-
-  <div class="mycontainer">
-    <div id="div-inline" class="box card">
-      <h2>SQL Server</h2>
-      <p>We provide safe and secure place<br> to retrive and recive data</p>
-    </div>
-    
-    <div id="div-inline" class="box card"> 
-      <h2>SQL Server</h2>
-      <p>We provide safe and secure place<br> to retrive and recive data</p>
-    </div>
-    <div id="div-inline" class="box card">
-      <h2>SQL Server</h2>
-      <p>We provide safe and secure place<br> to retrive and recive data</p>
-    </div><br>
-    
-  </div>
-  <center>
-  <div class="box card">
-      <h2>SQL Server</h2>
-      <p>We provide safe and secure place<br> to retrive and recive data</p>
-    </div>
-  </center>
-  
-  <div style="background-color: bisque;">
-    <h2>Meet Our Clients</h2>
-    <p>We are capable of providing software to all clients <br>
-       We are capable of providing software to all clients <br>
-       We are capable of providing software to all clients <br>
-       We are capable of providing software to all clients <br>
+  <section class="parallax-section white-section">
+  <div class="container text-center">
+    <h2>Welcome to JJ Tech Solutions</h2>
+    <p>
+      At JJ Tech Solutions, we believe technology is not just a tool — it's a catalyst for transformation. Founded with a vision to empower businesses through cutting-edge digital solutions, we are a team of passionate technologists, engineers, and innovators dedicated to building the future.
     </p>
-
+    <p>
+      With expertise in software development, AI and automation, cloud services, cybersecurity, and custom IT consulting, we deliver solutions that are scalable, secure, and tailored to your unique needs.
+    </p>
+    <p><strong>Our mission is simple:</strong> Empower. Innovate. Transform.</p>
+    <p>
+      Whether you're a startup looking to scale or an enterprise optimizing legacy systems, JJ Tech Solutions is your trusted partner in the digital journey.
+    </p>
   </div>
+</section>
+
+
+<section class="expertise-section py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Our Areas of Expertise</h2>
+    <div class="row justify-content-center g-4">
+
+      <div class="col-12 col-sm-10 col-md-6 col-lg-4 d-flex justify-content-center">
+        <div class="card p-4 border-0 rounded-4 shadow w-100" style="max-width: 300px;">
+          <div class="mb-3 text-center">
+            <img src="images/icons/sql icon.png" alt="SQL Server Icon" width="40">
+          </div>
+          <h4 class="fw-bold text-center">SQL Server</h4>
+          <p class="text-center">We provide a safe and secure place to retrieve and receive data.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-10 col-md-6 col-lg-4 d-flex justify-content-center">
+        <div class="card p-4 border-0 rounded-4 shadow w-100" style="max-width: 300px;">
+          <div class="mb-3 text-center">
+            <img src="images/icons/web development icon.png" alt="Web Dev Icon" width="40">
+          </div>
+          <h4 class="fw-bold text-center">Web Development</h4>
+          <p class="text-center">Build fast, secure, and scalable websites tailored to your business needs.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-10 col-md-6 col-lg-4 d-flex justify-content-center">
+        <div class="card p-4 border-0 rounded-4 shadow w-100" style="max-width: 300px;">
+          <div class="mb-3 text-center">
+            <img src="images/icons/cloud icon.png" alt="Cloud Icon" width="40">
+          </div>
+          <h4 class="fw-bold text-center">Cloud Solutions</h4>
+          <p class="text-center">Leverage the cloud for flexibility, performance, and lower infrastructure costs.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-10 col-md-6 col-lg-4 d-flex justify-content-center">
+        <div class="card p-4 border-0 rounded-4 shadow w-100" style="max-width: 300px;">
+          <div class="mb-3 text-center">
+            <img src="images/icons/ai icon.png" alt="AI Icon" width="40">
+          </div>
+          <h4 class="fw-bold text-center">AI & Automation</h4>
+          <p class="text-center">Integrate intelligent systems to streamline and automate your workflows.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="clients-section text-white text-center d-flex align-items-center" style="background-image: url('images/images5.jpeg'); background-attachment: fixed; background-size: cover; background-position: center; min-height: 400px;">
+  <div class="container py-5 bg-dark bg-opacity-50 rounded">
+    <h2 class="fw-bold mb-4">Meet Our Clients</h2>
+    <p class="lead">
+      We are capable of delivering powerful, customized software solutions to clients across industries — whether startups, enterprises, or institutions. Our experience spans across sectors and geographies, ensuring reliable, scalable, and user-friendly products for every business need.
+    </p>
+  </div>
+</section>
+
+
   <footer class="bg-dark text-white text-center py-4 mt-auto shadow position-relative">
     <div class="container">
       <div class="mb-3">
