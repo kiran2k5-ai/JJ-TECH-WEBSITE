@@ -1,0 +1,116 @@
+* { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      padding-top: 70px; /* for navbar space */
+      background: #f7f7f7;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .navbar-custom {
+      background-color: #fff !important;
+      border-bottom: 1px solid #ddd;
+      font-weight: 500;
+    }
+
+    .navbar-custom .nav-link, .navbar-custom .navbar-brand {
+      color: #000 !important;
+    }
+
+    .coverflow-container {
+      padding-top: 40px;
+      perspective: 1200px;
+      max-width: 1200px;
+      margin: 10px auto 0;
+      position: relative;
+    }
+
+    .coverflow {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      height: 300px;
+    }
+
+    .coverflow label {
+      position: absolute;
+      transition: all 0.5s ease;
+      cursor: pointer;
+      transform-style: preserve-3d;
+      opacity: 0;
+      z-index: 0;
+      transform: translateX(0) scale(0.5);
+    }
+
+    .coverflow label img {
+      width: 480px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      transition: all 0.5s ease;
+    }
+
+    .coverflow .active {
+      transform: translateX(0) scale(1.25);
+      opacity: 1;
+      z-index: 5;
+    }
+
+    .coverflow .left {
+      transform: translateX(-480px) rotateY(35deg) scale(0.8);
+      opacity: 0.8;
+      z-index: 4;
+    }
+
+    .coverflow .right {
+      transform: translateX(480px) rotateY(-35deg) scale(0.8);
+      opacity: 0.8;
+      z-index: 4;
+    }
+
+    .feature-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px 20px 40px;
+    }
+
+    .flowchart {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+    }
+
+    .flow-step {
+      flex: 1 1 calc(50% - 30px);
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: 0.6s ease-in-out;
+      background-color: wheat;
+    }
+
+    .flow-step.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2.animate-title, p.animate-subtitle {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: 0.6s ease-in-out;
+    }
+
+    .visible-title {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      .flow-step {
+        flex: 1 1 100%;
+      }
+    }

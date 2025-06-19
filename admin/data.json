@@ -1,0 +1,65 @@
+{
+    "site_name": "JJ TECH SOLUTIONS",
+    "about": "We are an innovative IT service provider offering custom solutions.",
+    "contact": {
+        "address": "25, Kovalan Nagar 7th St, Madurai",
+        "phone": "8838041680",
+        "email": "jjtech_madurai@yahoo.in"
+    },
+    "services": [
+        "Web Development",
+        "App Development"
+    ],
+    "pages_list": [
+        {
+            "title": "About Us",
+            "filename": "about.php"
+        },
+        {
+            "title": "Services",
+            "filename": "services.php"
+        },
+        {
+            "title": "Contact",
+            "filename": "contact.php"
+        },
+        {
+            "title": "Breeder",
+            "filename": "breeder.php"
+        },
+        {
+            "title": "Home",
+            "filename": "index.php"
+        }
+    ],
+    "pages": {
+        "index.php": {
+            "blocks": []
+        },
+        "breeder.php": {
+            "blocks": [
+                "Our breeder module provides detailed tracking and performance metrics for poultry farms.",
+                "Track hen performance, egg collection, and feed efficiency.",
+                "this is kiran"
+            ]
+        },
+        "contact.php": {
+            "blocks": []
+        },
+        "about.php": {
+            "blocks": []
+        },
+        "services.php": {
+            "blocks": []
+        },
+        "0": {
+            "title": "Accounts",
+            "filename": "Accounts.php"
+        }
+    },
+    "admin": {
+        "name": "John Doe",
+        "email": "admin@example.com",
+        "password": "admin123"
+    }
+}

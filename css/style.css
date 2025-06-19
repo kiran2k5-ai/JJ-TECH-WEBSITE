@@ -226,3 +226,44 @@ footer a:hover {
     padding-bottom: 40px;
   }
 }
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  border-radius: 10px;
+}
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  border: 0;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.animate-footer {
+  animation: fadeInUp 1.2s ease-in-out both;
+}
+
+/* Optional: subtle hover effect on icons */
+.fade-in-icons a i {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.fade-in-icons a:hover i {
+  transform: scale(1.2);
+  color: #ffc107; /* optional highlight color */
+}
+

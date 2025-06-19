@@ -1,0 +1,47 @@
+  .navbar-custom {
+      background-color: #fff !important;
+      border-bottom: 1px solid #ddd;
+      font-weight: 500;
+    }
+
+    .navbar-custom .nav-link, .navbar-custom .navbar-brand {
+      color: #000 !important;
+    }
+    .custom-dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 10px; /* space below the link */
+  border-top: 4px solid #0d6efd; /* Bootstrap primary blue */
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Prevent hiding when hovered */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.custom-dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 10px;
+  border-top: 4px solid #0d6efd;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Enlarge the dropdown box */
+.custom-big-dropdown {
+  width: 500px;
+  max-width: 90vw;
+  min-height: 250px;
+  border-radius: 10px;
+}
+
+
+/* Optional animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
