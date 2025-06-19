@@ -56,11 +56,20 @@ if (file_exists($dataFile)) {
         <button type="button" data-bs-target="#advancedCarousel" data-bs-slide-to="3"></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active"><img src="../images/hatchery/hatcher-images1.jpg" class="d-block w-100" alt="Image 1"></div>
-        <div class="carousel-item"><img src="../images/hatchery/hatcher-images2.jpg" class="d-block w-100" alt="Image 2"></div>
-        <div class="carousel-item"><img src="../images/hatchery/hatcher-images3.jpg" class="d-block w-100" alt="Image 3"></div>
-        <div class="carousel-item"><img src="../images/hatchery/hatcher-images4.jpg" class="d-block w-100" alt="Image 4"></div>
-      </div>
+  <div class="carousel-item active">
+    <img src="../images/hatchery/hatcher-images1.jpg" class="d-block w-100" alt="Image 1">
+  </div>
+  <div class="carousel-item">
+    <img src="../images/hatchery/hatcher-images2.jpg" class="d-block w-100" alt="Image 2">
+  </div>
+  <div class="carousel-item">
+    <img src="../images/hatchery/hatcher-images3.jpg" class="d-block w-100" alt="Image 3">
+  </div>
+  <div class="carousel-item">
+    <img src="../images/hatchery/hatcher-images4.jpg" class="d-block w-100" alt="Image 4">
+  </div>
+</div>
+
     </div>
   </div>
 </div>
