@@ -8,9 +8,26 @@ $blocks = [];
 if (file_exists($dataFile)) {
     $json = file_get_contents($dataFile);
     $data = json_decode($json, true);
-    if (isset($data['pages']['hatchery.php']['blocks'][0])) {
-        $mainBlock = $data['pages']['hatchery.php']['blocks'][0];
-        $blocks = reset($mainBlock); // Get the first key's value (array of blocks)
+
+    if (isset($data['pages']['hatchery.php']['blocks'])) {
+        $allBlocks = $data['pages']['hatchery.php']['blocks'];
+        foreach ($allBlocks as $block) {
+            // If it's in the format: { "Some Section Title": [ {...}, {...} ] }
+            if (is_array($block) && count($block) === 1 && is_array(reset($block))) {
+                $sectionTitle = key($block);
+                $serviceItems = reset($block);
+
+                foreach ($serviceItems as $item) {
+                    if (isset($item['title'], $item['features']) && is_array($item['features'])) {
+                        $blocks[] = [
+                            'section' => $sectionTitle,
+                            'title' => $item['title'],
+                            'features' => $item['features']
+                        ];
+                    }
+                }
+            }
+        }
     }
 }
 ?>
@@ -69,7 +86,7 @@ if (file_exists($dataFile)) {
   <div class="container">
     <h2 class="text-center mb-5 fw-bold animate-fade">🐣 JJ Tech Solutions – Hatchery Poultry Services</h2>
     <div class="row g-4">
-      <?php foreach ($blocks as $block): ?>
+      <?php foreach ($blocks as $index => $block): ?>
         <div class="col-md-6 animate-slide">
           <div class="p-4 border rounded bg-light shadow-sm">
             <h5><?= htmlspecialchars($block['title']) ?></h5>
