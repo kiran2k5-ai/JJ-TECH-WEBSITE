@@ -1,14 +1,8 @@
 <?php
-$dataFile = '../admin/data.json';
-$blocks = [];
+$dataFile = __DIR__ . '/admin/data.json';
+$data = json_decode(file_get_contents($dataFile), true);
 
-if (file_exists($dataFile)) {
-    $json = file_get_contents($dataFile);
-    $data = json_decode($json, true);
-    if (isset($data['pages']['breeder.php']['blocks'])) {
-        $blocks = $data['pages']['index.php']['blocks'];
-    }
-}
+$blocks = $data['pages']['index.php']['blocks'] ?? [];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -154,26 +148,28 @@ if (file_exists($dataFile)) {
       <h2 class="text-center fw-bold mb-5">Our Areas of Expertise</h2>
       <div class="row justify-content-center g-4">
 
-        <?php
-        $expertise = [
-          ["SQL Server", "sql icon.png", "We provide a safe and secure place to retrieve and receive data."],
-          ["Web Development", "web development icon.png", "Build fast, secure, and scalable websites tailored to your business needs."],
-          ["Cloud Solutions", "cloud icon.png", "Leverage the cloud for flexibility, performance, and lower infrastructure costs."],
-          ["AI & Automation", "ai icon.png", "Integrate intelligent systems to streamline and automate your workflows."]
-        ];
+        <div class="container my-5">
 
-        foreach ($expertise as $exp) {
-          echo '<div class="col-12 col-sm-10 col-md-6 col-lg-4 d-flex justify-content-center">
-                  <div class="card p-4 border-0 rounded-4 shadow w-100" style="max-width: 300px;">
-                    <div class="mb-3 text-center">
-                      <img src="images/icons/' . $exp[1] . '" alt="' . $exp[0] . ' Icon" width="40" loading="lazy">
-                    </div>
-                    <h4 class="fw-bold text-center">' . $exp[0] . '</h4>
-                    <p class="text-center">' . $exp[2] . '</p>
-                  </div>
-                </div>';
+  <div class="row">
+    <?php
+    foreach ($blocks as $block) {
+        if (is_array($block) && isset($block['type']) && $block['type'] === 'expertise') {
+            foreach ($block['data'] as $item) {
+                echo '<div class="col-md-6 col-lg-3">';
+                echo '  <div class="expertise-card">';
+                echo '    <img src="images/icons/' . htmlspecialchars($item['icon']) . '" class="expertise-icon" alt="' . htmlspecialchars($item['title']) . '">';
+                echo '    <h5 class="fw-semibold">' . htmlspecialchars($item['title']) . '</h5>';
+                echo '    <p class="text-muted">' . htmlspecialchars($item['description']) . '</p>';
+                echo '  </div>';
+                echo '</div>';
+            }
+        } elseif (is_string($block)) {
+            echo '<div class="col-12 mb-3"><p>' . htmlspecialchars($block) . '</p></div>';
         }
-        ?>
+    }
+    ?>
+  </div>
+</div>
       </div>
     </div>
   </section>

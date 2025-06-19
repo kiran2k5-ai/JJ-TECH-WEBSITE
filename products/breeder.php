@@ -17,7 +17,7 @@ if (file_exists($dataFile)) {
   <meta charset="UTF-8">
   <title>Breeder Management</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/products/breeder.css">
@@ -26,35 +26,43 @@ if (file_exists($dataFile)) {
 
 <?php include '../php/header.php'; ?>
 
+<!-- Coverflow -->
 <div class="coverflow-container">
   <div class="coverflow" id="coverflow">
     <?php for ($i = 1; $i <= 4; $i++): ?>
-      <label><img src="../images/breeder/breeder-image<?= $i ?>.jpg" alt="<?= $i ?>"></label>
       <label><img src="../images/breeder/breeder-image<?= $i ?>.jpg" alt="<?= $i ?>"></label>
     <?php endfor; ?>
   </div>
 </div>
 
+<!-- Feature Section -->
 <div class="feature-section">
   <div class="text-center mb-5">
     <h2 class="fw-bold text-dark animate-title">Our Poultry Breeder Management Features</h2>
-    <p class="text-muted animate-subtitle" style="background-color:blue">Empowering precision and productivity through technology</p>
+    <p class="text-white animate-subtitle bg-primary px-3 py-2 d-inline-block rounded">
+      Empowering precision and productivity through technology
+    </p>
   </div>
 
   <div class="flowchart">
 
+    <!-- Static Step -->
     <div class="flow-step">
       <h5>Breeder Management Systems</h5>
       <p>Monitor bird performance, egg production, fertility rates, and flock health with precision.</p>
     </div>
 
-    <?php foreach ($blocks as $i => $blockText): ?>
-      <div class="flow-step">
-        <p><?= htmlspecialchars($blockText) ?></p>
-      </div>
+    <!-- Dynamic Blocks -->
+    <?php foreach ($blocks as $block): ?>
+      <?php if (is_array($block) && isset($block['header'], $block['content'])): ?>
+        <div class="flow-step">
+          <h5><?= htmlspecialchars($block['header']) ?></h5>
+          <p><?= htmlspecialchars($block['content']) ?></p>
+        </div>
+      <?php endif; ?>
     <?php endforeach; ?>
 
-    <!-- Static Content -->
+    <!-- More Static Steps -->
     <div class="flow-step">
       <h5>Mobile & Web Platforms</h5>
       <p>Enable farmers, supervisors, and managers to access and update vital farm data from anywhere.</p>

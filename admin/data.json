@@ -30,21 +30,73 @@
         {
             "title": "Home",
             "filename": "index.php"
+        },
+        {
+            "title": "Accounts",
+            "filename": "Accounts.php"
+        },
+        {
+            "title": "Hatchery",
+            "filename": "hatchery.php"
         }
     ],
     "pages": {
         "index.php": {
-            "blocks": []
+            "blocks": [
+                {
+                    "type": "expertise",
+                    "data": [
+                        {
+                            "title": "SQL Server",
+                            "icon": "sql icon.png",
+                            "description": "We provide a safe and secure place to retrieve and receive data."
+                        },
+                        {
+                            "title": "Web Development",
+                            "icon": "web development icon.png",
+                            "description": "Build fast, secure, and scalable websites tailored to your business needs."
+                        },
+                        {
+                            "title": "Cloud Solutions",
+                            "icon": "cloud icon.png",
+                            "description": "Leverage the cloud for flexibility, performance, and lower infrastructure costs."
+                        },
+                        {
+                            "title": "AI & Automation",
+                            "icon": "ai icon.png",
+                            "description": "Integrate intelligent systems to streamline and automate your workflows."
+                        }
+                    ]
+                }
+            ]
         },
         "breeder.php": {
             "blocks": [
-                "Our breeder module provides detailed tracking and performance metrics for poultry farms.",
-                "Track hen performance, egg collection, and feed efficiency.",
-                "this is kiran"
+                {
+                    "header": "Overview",
+                    "content": "Our breeder module provides detailed tracking and performance metrics for poultry farms."
+                },
+                {
+                    "header": "Performance",
+                    "content": "Track hen performance, egg collection, and feed efficiency."
+                },
+                {
+                    "header": "Developer Note",
+                    "content": "This is Kiran"
+                }
             ]
         },
         "contact.php": {
-            "blocks": []
+            "blocks": [
+                "J.J.TECH Software Solutions (OPC) Private Limited",
+                "25, JOSE ILLAM, Kovalan Nagar 7th Street",
+                "TVS Nagar, Madurai - 625003, Tamil Nadu",
+                "India",
+                {
+                    "header": "hi",
+                    "content": "kjbdd"
+                }
+            ]
         },
         "about.php": {
             "blocks": []
@@ -52,9 +104,72 @@
         "services.php": {
             "blocks": []
         },
-        "0": {
-            "title": "Accounts",
-            "filename": "Accounts.php"
+        "Accounts.php": {
+            "blocks": []
+        },
+        "hatchery.php": {
+            "blocks": [
+                {
+                    "JJ Tech Solutions - Hatchery Poultry Services": [
+                        {
+                            "title": "🔧 Hatchery Management Software solution",
+                            "features": [
+                                "Track incubation batches, fertility, hatchability rates.",
+                                "Monitor machine usage, hatcher and setter data.",
+                                "Record egg candling, transfer, and hatch results."
+                            ]
+                        },
+                        {
+                            "title": "🌡️ IoT-based Monitoring & Automation",
+                            "features": [
+                                "Real-time monitoring of temperature, humidity, CO₂ levels.",
+                                "Alerts for critical changes or equipment failure.",
+                                "Automated control systems for setters\/hatchers."
+                            ]
+                        },
+                        {
+                            "title": "📊 Data Analytics & Reporting",
+                            "features": [
+                                "Predictive analytics for hatch success.",
+                                "Fertility trend analysis.",
+                                "Performance comparison between flocks or breeders."
+                            ]
+                        },
+                        {
+                            "title": "🧬 Traceability & Compliance",
+                            "features": [
+                                "Maintain batch history from egg collection to chick delivery.",
+                                "Easy retrieval of reports for audits and certifications.",
+                                "Integration with breeder farm and chick dispatch systems."
+                            ]
+                        },
+                        {
+                            "title": "📱 Mobile & Cloud Access",
+                            "features": [
+                                "Field staff can update egg counts, machine status from mobile.",
+                                "Managers can review performance from any location."
+                            ]
+                        },
+                        {
+                            "title": "📦 Inventory & Resource Management",
+                            "features": [
+                                "Monitor vaccine, egg tray, fuel, and disinfectant usage.",
+                                "Auto-alerts for stock shortages or expiry."
+                            ]
+                        },
+                        {
+                            "title": "👥 Role-based User Access",
+                            "features": [
+                                "Different interfaces and permissions for hatchery workers, managers, and auditors."
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "header": "kiran",
+                    "content": "This is kiran"
+                }
+            ]
         }
     },
     "admin": {

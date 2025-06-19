@@ -21,7 +21,7 @@
             <a class="dropdown-item" href="accounts.html">Accounts</a>
             <a class="dropdown-item" href="#">Integration</a>
             <a class="dropdown-item" href="../products/breeder.php">Breeder</a>
-            <a class="dropdown-item" href="#">Hatchery</a>
+            <a class="dropdown-item" href="../products/hatchery.php">Hatchery</a>
             <a class="dropdown-item" href="#">Feed Mill</a>
             <a class="dropdown-item" href="#">Processing Unit</a>
             <a class="dropdown-item" href="#">Retail Outlet</a>
@@ -30,7 +30,7 @@
         </li>
         <li class="nav-item"><a class="nav-link" href="client.html">Client</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="../contact.php">Contact</a></li>
       </ul>
     </div>
   </div>
