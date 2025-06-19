@@ -128,7 +128,7 @@ $blocks = $data['pages']['index.php']['blocks'] ?? [];
             </div>
           </li>
           <li class="nav-item"><a class="nav-link" href="client.html">Client</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
         </ul>
       </div>
