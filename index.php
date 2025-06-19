@@ -1,3 +1,15 @@
+<?php
+$dataFile = '../admin/data.json';
+$blocks = [];
+
+if (file_exists($dataFile)) {
+    $json = file_get_contents($dataFile);
+    $data = json_decode($json, true);
+    if (isset($data['pages']['breeder.php']['blocks'])) {
+        $blocks = $data['pages']['index.php']['blocks'];
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -114,7 +126,7 @@
               <a class="dropdown-item" href="accounts.html">Accounts</a>
               <a class="dropdown-item" href="#">Integration</a>
               <a class="dropdown-item" href="products/breeder.php">Breeder</a>
-              <a class="dropdown-item" href="#">Hatchery</a>
+              <a class="dropdown-item" href="products/hatchery.php">Hatchery</a>
               <a class="dropdown-item" href="#">Feed Mill</a>
               <a class="dropdown-item" href="#">Processing Unit</a>
               <a class="dropdown-item" href="#">Retail Outlet</a>
