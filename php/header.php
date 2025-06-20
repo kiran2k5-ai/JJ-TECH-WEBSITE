@@ -28,9 +28,9 @@
             <a class="dropdown-item" href="#">Trading</a>
           </div>
         </li>
-        <li class="nav-item"><a class="nav-link" href="client.html">Client</a></li>
+        <li class="nav-item"><a class="nav-link" href="client.php">Client</a></li>
         <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="../contact.php">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
       </ul>
     </div>
   </div>

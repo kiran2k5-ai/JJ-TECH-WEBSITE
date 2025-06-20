@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - JJ Tech Solutions</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
-    <!-- Custom Bootstrap Navbar -->
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top shadow bg-white">
         <div class="container">
             <a class="navbar-brand fw-bold" href="../index.php">JJ TECH SOLUTIONS</a>
@@ -25,22 +23,21 @@
                             <a class="dropdown-item" href="accounts.html">Accounts</a>
                             <a class="dropdown-item" href="#">Integration</a>
                             <a class="dropdown-item" href="../products/breeder.php">Breeder</a>
-                            <a class="dropdown-item" href="../products/hatchery.php">Hatchery</a>
+                            <a class="dropdown-item" href="products/hatchery.php">Hatchery</a>
                             <a class="dropdown-item" href="#">Feed Mill</a>
                             <a class="dropdown-item" href="#">Processing Unit</a>
                             <a class="dropdown-item" href="#">Retail Outlet</a>
                             <a class="dropdown-item" href="#">Trading</a>
                         </div>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="client.html">Client</a></li>
+                    <li class="nav-item"><a class="nav-link" href="client.php">Client</a></li>
                     <li class="nav-item"><a class="nav-link active" href="about.php">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../contact.php">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section with Parallax -->
     <section class="parallax-hero" id="home">
         <div class="parallax-bg"></div>
         <div class="parallax-overlay"></div>
@@ -51,7 +48,6 @@
         </div>
     </section>
 
-    <!-- Story Section -->
     <section class="content-section story-section" id="about">
         <div class="container-custom">
             <h2 class="section-title fade-in">Our Story</h2>
@@ -79,7 +75,6 @@
         </div>
     </section>
 
-    <!-- Second Parallax Section -->
     <section class="parallax-section">
         <div class="parallax-bg-2"></div>
         <div class="parallax-overlay"></div>
@@ -89,9 +84,6 @@
         </div>
     </section>
 
-
-
-    <!-- Values Section -->
     <section class="content-section values-section">
         <div class="container-custom">
             <h2 class="section-title fade-in">Our Values</h2>
@@ -115,11 +107,9 @@
         </div>
     </section>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     
     <script>
-        // Custom dropdown hover functionality
         document.addEventListener("DOMContentLoaded", function () {
             const dropdown = document.querySelector(".custom-dropdown");
             if (dropdown) {
@@ -142,7 +132,6 @@
             }
         });
 
-        // Parallax effect
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const parallaxBg = document.querySelector('.parallax-bg');
@@ -160,7 +149,6 @@
             }
         });
 
-        // Fade in animation on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -178,7 +166,6 @@
             observer.observe(el);
         });
 
-        // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar-custom');
             if (window.scrollY > 100) {
@@ -188,7 +175,6 @@
             }
         });
 
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();

@@ -4,6 +4,18 @@ $data = json_decode(file_get_contents($dataFile), true);
 
 $blocks = $data['pages']['index.php']['blocks'] ?? [];
 ?>
+<?php
+$filename = "counter.txt";
+
+if (!file_exists($filename)) {
+    file_put_contents($filename, "0");
+}
+
+$count = file_get_contents($filename);
+$count = intval($count) + 1;
+file_put_contents($filename, $count);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +27,7 @@ $blocks = $data['pages']['index.php']['blocks'] ?? [];
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/style.css">
@@ -105,41 +118,18 @@ $blocks = $data['pages']['index.php']['blocks'] ?? [];
 
 <body class="d-flex flex-column min-vh-100">
 
-  <nav class="navbar navbar-expand-lg navbar-custom fixed-top shadow bg-white">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.php">JJ TECH SOLUTIONS</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-          <li class="nav-item dropdown custom-dropdown">
-            <a class="nav-link" href="products.html" id="productsDropdown">Products</a>
-            <div class="dropdown-menu shadow-lg p-4">
-              <a class="dropdown-item" href="accounts.html">Accounts</a>
-              <a class="dropdown-item" href="#">Integration</a>
-              <a class="dropdown-item" href="products/breeder.php">Breeder</a>
-              <a class="dropdown-item" href="products/hatchery.php">Hatchery</a>
-              <a class="dropdown-item" href="#">Feed Mill</a>
-              <a class="dropdown-item" href="#">Processing Unit</a>
-              <a class="dropdown-item" href="#">Retail Outlet</a>
-              <a class="dropdown-item" href="#">Trading</a>
-            </div>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="client.html">Client</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<? include "../php/header.php"?>
 
   <section class="clients-section text-white text-center d-flex align-items-center" style="background-image: url('images/home/images3.jpeg'); background-attachment: fixed; background-size: cover; background-position: center; min-height: 400px;">
     <div class="container py-5 bg-dark bg-opacity-50 rounded">
       <h2>Welcome to JJ Tech Solutions</h2>
       <p>At JJ Tech Solutions, we believe technology is not just a tool — it's a catalyst for transformation...</p>
       <p><strong>Our mission is simple:</strong> Empower. Innovate. Transform.</p>
+      <div class="w3-container">
+        <h2>Badges</h2>
+        <p>The w3-badge class creates a circular badge. Badges are black by default.</p>
+        <p>Visitor Count <span class="w3-badge w3-xlarge w3-padding w3-black"><?php echo $count?></span></p>
+      </div>
     </div>
   </section>
 
@@ -174,15 +164,12 @@ $blocks = $data['pages']['index.php']['blocks'] ?? [];
     </div>
   </section>
 
-  <!-- Clients Section -->
   <section class="clients-section text-white text-center d-flex align-items-center" style="background-image: url('images/home/images5.jpeg'); background-attachment: fixed; background-size: cover; background-position: center; min-height: 400px;">
     <div class="container py-5 bg-dark bg-opacity-50 rounded">
       <h2 class="fw-bold mb-4">Meet Our Clients</h2>
       <p class="lead">We deliver powerful, customized software solutions across industries...</p>
     </div>
   </section>
-
-  <!-- Footer -->
   <footer class="bg-dark text-white text-center py-5 mt-auto shadow">
     <div class="container">
       <div class="row justify-content-center">
@@ -214,16 +201,4 @@ $blocks = $data['pages']['index.php']['blocks'] ?? [];
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-<?php
-$filename = "counter.txt";
 
-if (!file_exists($filename)) {
-    file_put_contents($filename, "0");
-}
-
-$count = file_get_contents($filename);
-$count = intval($count) + 1;
-file_put_contents($filename, $count);
-
-echo "Visitors: " . $count;
-?>

@@ -483,9 +483,8 @@
     </style>
 </head>
 <body>
-<?php include'php/header.php'?>
+<?php include 'php/header.php' ?>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="parallax-bg"></div>
         <div class="hero-content">
@@ -494,7 +493,6 @@
         </div>
     </section>
 
-    <!-- Clients Section -->
     <section class="clients-section" id="clients">
         <div class="container">
             <h2 class="section-title">Our Valued Partners</h2>
@@ -545,7 +543,6 @@
         </div>
     </section>
 
-    <!-- Rotating Carousel -->
     <section class="carousel-section">
         <div class="container">
             <h2 class="carousel-title">Trusted by Global Brands</h2>
@@ -559,7 +556,7 @@
             <div class="carousel-item"><img src="https://logo.clearbit.com/linkedin.com" alt="LinkedIn"></div>
             <div class="carousel-item"><img src="https://logo.clearbit.com/adobe.com" alt="Adobe"></div>
             <div class="carousel-item"><img src="https://logo.clearbit.com/salesforce.com" alt="Salesforce"></div>
-            <!-- Duplicate for seamless loop -->
+            
             <div class="carousel-item"><img src="https://logo.clearbit.com/spotify.com" alt="Spotify"></div>
             <div class="carousel-item"><img src="https://logo.clearbit.com/uber.com" alt="Uber"></div>
             <div class="carousel-item"><img src="https://logo.clearbit.com/airbnb.com" alt="Airbnb"></div>
@@ -571,7 +568,6 @@
         </div>
     </section>
 
-    <!-- Parallax Content -->
     <section class="parallax-content">
         <div class="parallax-bg-2"></div>
         <div class="parallax-text">
@@ -580,24 +576,35 @@
         </div>
     </section>
 
-<?php include'php/footer.php'?>
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Ready to Join Our Success Stories?</h3>
+            <p>Let's create something amazing together</p>
+            <div class="footer-links">
+                <a href="#contact">Contact Us</a>
+                <a href="#portfolio">Our Work</a>
+                <a href="#services">Services</a>
+                <a href="#about">About Us</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 ClientHub. All rights reserved. Crafted with passion and precision.</p>
+            </div>
+        </div>
+    </footer>
 
     <script>
-        // Parallax effect on scroll
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const parallaxBg = document.querySelector('.parallax-bg');
             const parallaxBg2 = document.querySelector('.parallax-bg-2');
             const header = document.getElementById('header');
 
-            // Header background change on scroll
             if (scrolled > 100) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
 
-            // Parallax background movement
             if (parallaxBg) {
                 parallaxBg.style.transform = `translateY(${scrolled * 0.5}px)`;
             }
@@ -606,7 +613,6 @@
             }
         });
 
-        // Smooth scroll for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -620,7 +626,6 @@
             });
         });
 
-        // Add intersection observer for animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
