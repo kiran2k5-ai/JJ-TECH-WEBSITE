@@ -36,6 +36,53 @@ file_put_contents($filename, $count);
       margin: 0;
       font-family: 'Poppins', sans-serif;
     }
+      .navbar-custom {
+      background-color: #fff !important;
+      border-bottom: 1px solid #ddd;
+      font-weight: 500;
+    }
+
+    .navbar-custom .nav-link, .navbar-custom .navbar-brand {
+      color: #000 !important;
+    }
+    .custom-dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 10px; /* space below the link */
+  border-top: 4px solid #0d6efd; /* Bootstrap primary blue */
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Prevent hiding when hovered */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.custom-dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 10px;
+  border-top: 4px solid #0d6efd;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Enlarge the dropdown box */
+.custom-big-dropdown {
+  width: 500px;
+  max-width: 90vw;
+  min-height: 250px;
+  border-radius: 10px;
+}
+
+
+/* Optional animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
     .hero-section,
     .carousel-inner,
     .carousel-item,
@@ -118,7 +165,65 @@ file_put_contents($filename, $count);
 
 <body class="d-flex flex-column min-vh-100">
 
-<? include "../php/header.php"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/php/header.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top shadow bg-white">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="../index.php">JJ TECH SOLUTIONS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="../index.php">Home</a></li>
+        <li class="nav-item dropdown custom-dropdown">
+          <a class="nav-link" href="products.html">Products</a>
+          <div class="dropdown-menu shadow-lg p-4">
+            <a class="dropdown-item" href="accounts.html">Accounts</a>
+            <a class="dropdown-item" href="#">Integration</a>
+            <a class="dropdown-item" href="../products/breeder.php">Breeder</a>
+            <a class="dropdown-item" href="../products/hatchery.php">Hatchery</a>
+            <a class="dropdown-item" href="#">Feed Mill</a>
+            <a class="dropdown-item" href="#">Processing Unit</a>
+            <a class="dropdown-item" href="#">Retail Outlet</a>
+            <a class="dropdown-item" href="#">Trading</a>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="client.php">Client</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.php">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const dropdown = document.querySelector(".custom-dropdown");
+
+    dropdown.addEventListener("mouseenter", function () {
+      this.classList.add("show");
+      const menu = this.querySelector(".dropdown-menu");
+      menu.classList.add("show");
+      menu.style.marginTop = "10px";
+      menu.style.borderTop = "4px solid #0d6efd";
+    });
+
+    dropdown.addEventListener("mouseleave", function () {
+      this.classList.remove("show");
+      const menu = this.querySelector(".dropdown-menu");
+      menu.classList.remove("show");
+    });
+  });
+</script>
+
+</body>
+</html>
 
   <section class="clients-section text-white text-center d-flex align-items-center" style="background-image: url('images/home/images3.jpeg'); background-attachment: fixed; background-size: cover; background-position: center; min-height: 400px;">
     <div class="container py-5 bg-dark bg-opacity-50 rounded">
